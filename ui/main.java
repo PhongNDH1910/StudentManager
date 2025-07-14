@@ -1,14 +1,14 @@
 package ui;
 
-import model.student;
-import service.studentService;
+import model.Student;
+import service.StudentService;
 
 import java.util.Scanner;
 import java.util.List;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        studentService service = new studentService();
+        StudentService service = new StudentService();
         Scanner sc = new Scanner(System.in);
         int choice;
 
@@ -32,7 +32,7 @@ public class main {
                         System.out.print("Enter GPA: ");
                         double gpa = Double.parseDouble(sc.nextLine());
 
-                        student s = new student(id, name, gpa);
+                        Student s = new Student(id, name, gpa);
                         service.addStudent(s);
                         break;
 
@@ -46,7 +46,7 @@ public class main {
                     case 3:
                         System.out.print("Enter name to search: ");
                         String keyword = sc.nextLine();
-                        List<student> result = service.searchByName(keyword);
+                        List<Student> result = service.searchByName(keyword);
                         if (result.isEmpty()) {
                             System.out.println("No matching students.");
                         } else {
