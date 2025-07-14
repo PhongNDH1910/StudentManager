@@ -1,11 +1,11 @@
 package model;
 
-public class student {
+public class Student {
     private int id;
     private String fullName;
     private double gpa;
 
-    public student(int id, String fullName, double gpa) {
+    public Student(int id, String fullName, double gpa) {
         this.id = id;
         this.setFullName(fullName);
         this.setGpa(gpa);
